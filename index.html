@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Liuyunyicai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Liuyunyicai">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="Liuyunyicai">
+<meta property="og:description">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Liuyunyicai">
+<meta name="twitter:description">
+  
+    <link rel="alternative" href="/atom.xml" title="Liuyunyicai" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+      <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
+  
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+      <style> .article { opacity: 0;} </style>
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+    
+    
+  
+  
+      <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.9/clipboard.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: true,
+          isPost: false,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+          fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+          scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.0.9/scrollreveal.min.js"
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">流云易采</a></h1>
+        </hgroup>
+
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">流云易采</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">流云易采</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap">
+  
+    <article id="post-ArrayMapy、SparseArray源码学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/06/ArrayMapy、SparseArray源码学习/" class="article-date">
+      <time datetime="2016-05-06T08:39:33.378Z" itemprop="datePublished">2016-05-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>#ArrayMapy、SparseArray源码学习<br>ArrayMap和SparseArray是Android中提供用来替代HashMap实现内存优化的集合类，来具体看下其源码实现：<br><strong>一、ArrayMap简单分析</strong><br><strong>1）存储原理：</strong><br>HashMap是使用一个table数组来存储；发生冲突时采用链地址法以链表或者红黑树的形式进行存储；<br>而ArrayMap使用的是两个数组，mHash数组用来存储hash值（顺序存储）；mArray在对应位置存储（比如mHash存储位置为index），偶数位（index&lt;<1）存储key;奇数位(index<<+1)存储value; 发生冲突时，mhash把相同的hash组放在一起存储（因为mhash是按照hash值大小顺序来存储的）；="" <figure="" class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public final class ArrayMap&lt;K, V&gt; implements Map&lt;K, V&gt; &#123;</span><br><span class="line">    int[] mHashes;</span><br><span class="line">    Object[] mArray;</span><br><span class="line">    int mSize;</span><br><span class="line">    public ArrayMap(int capacity) &#123;</span><br><span class="line">        if (capacity == 0) &#123;</span><br><span class="line">            mHashes = EmptyArray.INT;</span><br><span class="line">            mArray = EmptyArray.OBJECT;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            allocArrays(capacity);</span><br><span class="line">        &#125;</span><br><span class="line">        mSize = 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></1）存储key;奇数位(index<<+1)存储value;></p>
+<p><strong>2）添加元素put操作：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">public V put(K key, V value) &#123;</span><br><span class="line">    final int hash;</span><br><span class="line">    int index;</span><br><span class="line">    if (key == null) &#123;</span><br><span class="line">        hash = 0;</span><br><span class="line">        index = indexOfNull();</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 根据hash值查找key对应的位置</span><br><span class="line">        hash = key.hashCode();</span><br><span class="line">        index = indexOf(key, hash);</span><br><span class="line">    &#125;</span><br><span class="line">    // 大于0表示该元素已经存在，这里直接覆盖即可</span><br><span class="line">    if (index &gt;= 0) &#123;</span><br><span class="line">        index = (index&lt;&lt;1) + 1;</span><br><span class="line">        final V old = (V)mArray[index];</span><br><span class="line">        mArray[index] = value;</span><br><span class="line">        return old;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // &lt;0表示不存在，取反得到插入位置</span><br><span class="line">    index = ~index;</span><br><span class="line">    // 插入前判断是否需要扩容</span><br><span class="line">    if (mSize &gt;= mHashes.length) &#123;</span><br><span class="line">        // 重新分配空间大小</span><br><span class="line">        final int n = mSize &gt;= (BASE_SIZE*2) ? (mSize+(mSize&gt;&gt;1))</span><br><span class="line">                : (mSize &gt;= BASE_SIZE ? (BASE_SIZE*2) : BASE_SIZE);</span><br><span class="line"></span><br><span class="line">        final int[] ohashes = mHashes;</span><br><span class="line">        final Object[] oarray = mArray;</span><br><span class="line">        // 分配数组空间</span><br><span class="line">        allocArrays(n);</span><br><span class="line"></span><br><span class="line">        // 将原始数组拷贝到新分配的数组中</span><br><span class="line">        if (mHashes.length &gt; 0) &#123;</span><br><span class="line">            if (DEBUG) Log.d(TAG, &quot;put: copy 0-&quot; + mSize + &quot; to 0&quot;);</span><br><span class="line">            System.arraycopy(ohashes, 0, mHashes, 0, ohashes.length);</span><br><span class="line">            System.arraycopy(oarray, 0, mArray, 0, oarray.length);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 释放原来的空间</span><br><span class="line">        freeArrays(ohashes, oarray, mSize);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 简单的插入操作</span><br><span class="line">    if (index &lt; mSize) &#123;</span><br><span class="line">        System.arraycopy(mHashes, index, mHashes, index + 1, mSize - index);</span><br><span class="line">        System.arraycopy(mArray, index &lt;&lt; 1, mArray, (index + 1) &lt;&lt; 1, (mSize - index) &lt;&lt; 1);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 对应位置进行赋值</span><br><span class="line">    mHashes[index] = hash;</span><br><span class="line">    mArray[index&lt;&lt;1] = key;</span><br><span class="line">    mArray[(index&lt;&lt;1)+1] = value;</span><br><span class="line">    mSize++;</span><br><span class="line">    return null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>查找插入位置：</strong><br>HashMap是根据key的hashcode，然后将其高低十六位相与hash&amp;（hash&gt;&gt;&gt;16）,进而与table数组的长度length相与（hash&amp;(length-1)）来找到对应的table数组插入位置；<br>而ArrayMap是通过ContainerHelpers的binarySearch即二分查找的方法，根据key的hash值来查找mHash数组（顺序数组），找到对应的index；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">// 二分法查找对应位置</span><br><span class="line">int indexOf(Object key, int hash) &#123;</span><br><span class="line">    final int N = mSize;</span><br><span class="line"></span><br><span class="line">    // Important fast case: if nothing is in here, nothing to look for.</span><br><span class="line">    if (N == 0) &#123;</span><br><span class="line">        return ~0;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 二分查找，查找结果</span><br><span class="line">    int index = ContainerHelpers.binarySearch(mHashes, N, hash);</span><br><span class="line"></span><br><span class="line">    // If the hash code wasn&apos;t found, then we have no entry for this key.</span><br><span class="line">    // &lt;0表示没有查找到</span><br><span class="line">    if (index &lt; 0) &#123;</span><br><span class="line">        return index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 解决冲突，双向进行查找一次相同的hash值，比较key值是否匹配</span><br><span class="line">    // If the key at the returned index matches, that&apos;s what we want.</span><br><span class="line">    if (key.equals(mArray[index&lt;&lt;1])) &#123;</span><br><span class="line">        return index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Search for a matching key after the index.</span><br><span class="line">    int end;</span><br><span class="line">    for (end = index + 1; end &lt; N &amp;&amp; mHashes[end] == hash; end++) &#123;</span><br><span class="line">        if (key.equals(mArray[end &lt;&lt; 1])) return end;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Search for a matching key before the index.</span><br><span class="line">    for (int i = index - 1; i &gt;= 0 &amp;&amp; mHashes[i] == hash; i--) &#123;</span><br><span class="line">        if (key.equals(mArray[i &lt;&lt; 1])) return i;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // Key not found -- return negative value indicating where a</span><br><span class="line">    // new entry for this key should go.  We use the end of the</span><br><span class="line">    // hash chain to reduce the number of array entries that will</span><br><span class="line">    // need to be copied when inserting.</span><br><span class="line">    return ~end;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>简单的二分查找：</strong> </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// This is Arrays.binarySearch(), but doesn&apos;t do any argument validation.</span><br><span class="line">static int binarySearch(int[] array, int size, int value) &#123;</span><br><span class="line">    int lo = 0;</span><br><span class="line">    int hi = size - 1;</span><br><span class="line"></span><br><span class="line">    while (lo &lt;= hi) &#123;</span><br><span class="line">        final int mid = (lo + hi) &gt;&gt;&gt; 1;</span><br><span class="line">        final int midVal = array[mid];</span><br><span class="line"></span><br><span class="line">        if (midVal &lt; value) &#123;</span><br><span class="line">            lo = mid + 1;</span><br><span class="line">        &#125; else if (midVal &gt; value) &#123;</span><br><span class="line">            hi = mid - 1;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            return mid;  // value found</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return ~lo;  // value not present</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>冲突解决：</strong><br>HashMap是采用遍历链表来实现；而ArrayMap的mHash表中可能存在多个相同的hash值，即冲突；它通过二分查找，找到相应的一个相等值，然后以这个值为中心，分别向前向后遍历，比较对应的key值是否相等；</p>
+<p><strong>继续看前面的put过程：</strong><br>未找到情况：当没有找到对应的hash值，或者相同的hash，但没有找到相等的key的情况，这个时候，查找结果index表示待插入的位置，未找到返回index的取反（~index）;便于插入操作判断是进行插入还是重写；</p>
+<p><strong>覆盖操作：</strong><br>如果index&gt;=0表示当期key值已存在，则需要进行覆盖，将mArray[(index&lt;&lt;1) + 1]即value赋值为新的value值，然后返回old value值；<br>如果index&lt;0，表示需要执行插入操作，~index即为新元素要插入的位置；</p>
+<p><strong>扩充容量：</strong><br>再插入之前，首先判断当前存储空间是否足够，HashMap的扩容时机是总空间超过容量<em>状态因子时，而ArrayMap是当mHash的大小超过MAX_SIZE，即进行扩容，扩容的算法为：<br>n = mSize &gt;= (BASE_SIZE</em>2) ? (mSize+(mSize&gt;&gt;1))<br>        : (mSize &gt;= BASE_SIZE ? (BASE_SIZE*2) : BASE_SIZE);<br>BASE_SIZE=4;即容量大于8的时候，扩容1.5倍；容量大于4小于8时，直接分配空间为8；否则分配空间为4；<br>扩充容量的操作和ArrayList差不多，都是操作数组进行复制。注意这里mHash和mArray都要复制；</p>
+<p><strong>插入操作：</strong><br>插入操作也是简单的数组已知index进行插入问题，简单的arraycopy；</p>
+<p><strong>3）get操作</strong>较为简单，通过mHash数组获取存储位置，&lt;0表示没有找到，否则返回value值即可；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public V get(Object key) &#123;</span><br><span class="line">    final int index = indexOfKey(key);</span><br><span class="line">    return index &gt;= 0 ? (V)mArray[(index&lt;&lt;1)+1] : null;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>4）remove操作：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public V remove(Object key) &#123;</span><br><span class="line">    // 查找对应的index进行remove</span><br><span class="line">    final int index = indexOfKey(key);</span><br><span class="line">    if (index &gt;= 0) &#123;</span><br><span class="line">        return removeAt(index);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return null;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Remove the key/value mapping at the given index.</span><br><span class="line"> * @param index The desired index, must be between 0 and &#123;@link #size()&#125;-1.</span><br><span class="line"> * @return Returns the value that was stored at this index.</span><br><span class="line"> */</span><br><span class="line">public V removeAt(int index) &#123;</span><br><span class="line">    final Object old = mArray[(index &lt;&lt; 1) + 1];</span><br><span class="line">    if (mSize &lt;= 1) &#123;</span><br><span class="line">        // Now empty.</span><br><span class="line">        // 删除之后数组中元素就为空了，所以进行空间释放</span><br><span class="line">        freeArrays(mHashes, mArray, mSize);</span><br><span class="line">        mHashes = EmptyArray.INT;</span><br><span class="line">        mArray = EmptyArray.OBJECT;</span><br><span class="line">        mSize = 0;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        // 如果空余空间过多，将要收缩空间</span><br><span class="line">        if (mHashes.length &gt; (BASE_SIZE*2) &amp;&amp; mSize &lt; mHashes.length/3) &#123;</span><br><span class="line">            // Shrunk enough to reduce size of arrays.  We don&apos;t allow it to</span><br><span class="line">            // shrink smaller than (BASE_SIZE*2) to avoid flapping between</span><br><span class="line">            // that and BASE_SIZE.</span><br><span class="line">            // 收缩空间大小</span><br><span class="line">            final int n = mSize &gt; (BASE_SIZE*2) ? (mSize + (mSize&gt;&gt;1)) : (BASE_SIZE*2);</span><br><span class="line"></span><br><span class="line">            final int[] ohashes = mHashes;</span><br><span class="line">            final Object[] oarray = mArray;</span><br><span class="line">            allocArrays(n);</span><br><span class="line"></span><br><span class="line">            // 简单的数组元素删除操作</span><br><span class="line">            mSize--;</span><br><span class="line">            if (index &gt; 0) &#123;</span><br><span class="line">                if (DEBUG) Log.d(TAG, &quot;remove: copy from 0-&quot; + index + &quot; to 0&quot;);</span><br><span class="line">                System.arraycopy(ohashes, 0, mHashes, 0, index);</span><br><span class="line">                System.arraycopy(oarray, 0, mArray, 0, index &lt;&lt; 1);</span><br><span class="line">            &#125;</span><br><span class="line">            if (index &lt; mSize) &#123;</span><br><span class="line">                if (DEBUG) Log.d(TAG, &quot;remove: copy from &quot; + (index+1) + &quot;-&quot; + mSize</span><br><span class="line">                        + &quot; to &quot; + index);</span><br><span class="line">                System.arraycopy(ohashes, index + 1, mHashes, index, mSize - index);</span><br><span class="line">                System.arraycopy(oarray, (index + 1) &lt;&lt; 1, mArray, index &lt;&lt; 1,</span><br><span class="line">                        (mSize - index) &lt;&lt; 1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            mSize--;</span><br><span class="line">            if (index &lt; mSize) &#123;</span><br><span class="line">                if (DEBUG) Log.d(TAG, &quot;remove: move &quot; + (index+1) + &quot;-&quot; + mSize</span><br><span class="line">                        + &quot; to &quot; + index);</span><br><span class="line">                System.arraycopy(mHashes, index + 1, mHashes, index, mSize - index);</span><br><span class="line">                System.arraycopy(mArray, (index + 1) &lt;&lt; 1, mArray, index &lt;&lt; 1,</span><br><span class="line">                        (mSize - index) &lt;&lt; 1);</span><br><span class="line">            &#125;</span><br><span class="line">            mArray[mSize &lt;&lt; 1] = null;</span><br><span class="line">            mArray[(mSize &lt;&lt; 1) + 1] = null;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return (V)old;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>ArrayMap的remove操作，除了将元素从数组指定位置删除之外；当数组的空余空间过多时，还需要对空间进行紧缩。<br>紧缩的时机是mHashes.length &gt; (BASE_SIZE*2) &amp;&amp; mSize &lt; mHashes.length/3；<br>即mHash数组的容量大于8，并且当前存储的元素不足总空间的三分之一，则进行紧缩，来节省内存使用。</p>
+<p><strong>二、SparseArray简单分析：</strong><br>SparseArray是用来替代HashpMap<integer,xxx>的，即key的类型为Integer，ArrayMap避免了int的自动装箱操作，和ArrayMap的原理大致相同，也是使用了两个数组mKeys、mValues来分别存储key值和value值。避免了对int类型的key再进行Hash。<br>同样查找元素的操作也是通过二分法，基本原理和ArrayMap大致相同；这里有个区别是，当删除元素时，并不立即将对应key删除，然后占一个空位便于以后今后复用；当空间紧张时，再进行统一删除，避免了频繁的数组移动操作；<br><strong>1）put操作：</strong></integer,xxx></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public void put(int key, E value) &#123;</span><br><span class="line">    // 二分查找位置</span><br><span class="line">    int i = ContainerHelpers.binarySearch(mKeys, mSize, key);</span><br><span class="line"></span><br><span class="line">    // 找到对应元素</span><br><span class="line">    if (i &gt;= 0) &#123;</span><br><span class="line">        mValues[i] = value;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        i = ~i;</span><br><span class="line"></span><br><span class="line">        // 这里是进行复用之前已经删过的元素</span><br><span class="line">        if (i &lt; mSize &amp;&amp; mValues[i] == DELETED) &#123;</span><br><span class="line">            mKeys[i] = key;</span><br><span class="line">            mValues[i] = value;</span><br><span class="line">            return;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 如果数组空间不够继续存储时，对原数组进行GC</span><br><span class="line">        if (mGarbage &amp;&amp; mSize &gt;= mKeys.length) &#123;</span><br><span class="line">            gc();</span><br><span class="line"></span><br><span class="line">            // Search again because indices may have changed.</span><br><span class="line">            i = ~ContainerHelpers.binarySearch(mKeys, mSize, key);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 执行插入操作</span><br><span class="line">        mKeys = GrowingArrayUtils.insert(mKeys, mSize, i, key);</span><br><span class="line">        mValues = GrowingArrayUtils.insert(mValues, mSize, i, value);</span><br><span class="line">        mSize++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到和ArrayMap基本相同，也是通过二分查找找到对应的存储位置，然后执行插入，只不过这里多个一个删除元素复用的情况；来看一下删除的逻辑：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public void remove(int key) &#123;</span><br><span class="line">    delete(key);</span><br><span class="line">&#125;</span><br><span class="line">public void delete(int key) &#123;</span><br><span class="line">    int i = ContainerHelpers.binarySearch(mKeys, mSize, key);</span><br><span class="line"></span><br><span class="line">    if (i &gt;= 0) &#123;</span><br><span class="line">        if (mValues[i] != DELETED) &#123;</span><br><span class="line">            mValues[i] = DELETED;</span><br><span class="line">            mGarbage = true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Removes the mapping at the specified index.</span><br><span class="line"> */</span><br><span class="line">public void removeAt(int index) &#123;</span><br><span class="line">    if (mValues[index] != DELETED) &#123;</span><br><span class="line">        mValues[index] = DELETED;</span><br><span class="line">        mGarbage = true;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可以看到删除逻辑中只是将要删除的元素的value值设置成了一个DELETE的空对象，并未进行移位删除操作；它的移位删除操作统一放在了put里面数组空间不够用时进行的gc函数中：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">private void gc() &#123;</span><br><span class="line">    // Log.e(&quot;SparseArray&quot;, &quot;gc start with &quot; + mSize);</span><br><span class="line"></span><br><span class="line">    int n = mSize;</span><br><span class="line">    int o = 0;</span><br><span class="line">    int[] keys = mKeys;</span><br><span class="line">    Object[] values = mValues;</span><br><span class="line"></span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        Object val = values[i];</span><br><span class="line"></span><br><span class="line">        if (val != DELETED) &#123;</span><br><span class="line">            if (i != o) &#123;</span><br><span class="line">                keys[o] = keys[i];</span><br><span class="line">                values[o] = val;</span><br><span class="line">                values[i] = null;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            o++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    mGarbage = false;</span><br><span class="line">    mSize = o;</span><br><span class="line"></span><br><span class="line">    // Log.e(&quot;SparseArray&quot;, &quot;gc end with &quot; + mSize);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简单的数组紧缩操作，从前往后扫描，将非DELETE元素通过交换紧缩到前面空间中来；</p>
+<p>因此综上来看，ArrayMap和SparseMap都是通过数组来实现的，一个数组存储hash值（key值），用以通过二分查找查找key对应的存储位置；相对于HashMap的查询效率O(1)而言，ArrayMap和 SparseMap的查询效率O(lgn)并不出色，而且涉及到大量的数组移位操作；但是ArrayMap和 SparseMap最大的好处是节省空间，而且提供了良好的及时进行空间紧缩，特别适合Android这些内存空间比较紧张的开发环境。而SparseMap是对应HashMap特殊情况的优化，在key为Integer时，避免了装箱操作。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-RxJava学习" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/06/RxJava学习/" class="article-date">
+      <time datetime="2016-05-06T07:47:45.000Z" itemprop="datePublished">2016-05-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/06/RxJava学习/">RxJava学习</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/06/hello-world/" class="article-date">
+      <time datetime="2016-05-06T07:21:24.742Z" itemprop="datePublished">2016-05-06</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/06/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+  
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 流云易采
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
