@@ -265,8 +265,7 @@
       
           
         <p>以TouchEvent为主，看一下View和ViewGroup内部是如何处理Input Events的；<br>首先来看事件的产生来源：</p>
-<p>#一、获取事件:</p>
-<p>事件的来源可以分为“软件”，“硬件”两种；<br>主要的事件包含有：<br><strong>按键事件（KeyEvent）</strong>    :即物理按键按下产生的事件，相关的常用物理按键一般有HOME,BACK等<br><strong>触摸事件（TouchEvent）</strong>:<br>鼠标事件（MouseEvent）、轨迹球事件（TrackBallEvent）（这两个已经不常见）；</p>
+<h1 id="一、获取事件"><a href="#一、获取事件" class="headerlink" title="一、获取事件:"></a>一、获取事件:</h1><p>事件的来源可以分为“软件”，“硬件”两种；<br>主要的事件包含有：<br><strong>按键事件（KeyEvent）</strong>    :即物理按键按下产生的事件，相关的常用物理按键一般有HOME,BACK等<br><strong>触摸事件（TouchEvent）</strong>:<br>鼠标事件（MouseEvent）、轨迹球事件（TrackBallEvent）（这两个已经不常见）；</p>
 <p>针对所有事件的共性抽象出了InputEvent接口；其有两个子类：KeyEvent,MotionEvent;</p>
 <h2 id="1、事件的投递流程："><a href="#1、事件的投递流程：" class="headerlink" title="1、事件的投递流程："></a>1、事件的投递流程：</h2><p><img src="http://chuantu.biz/t4/12/1462870025x3738746571.png" alt="enter image description here"></p>
 <p><strong>1&gt;源信息采集</strong><br>    对“硬件源”产生的原始信息进行收集；它需要Linux内核驱动的支持，Android系统通过/dev/input下的节点来访问当前发生的事件。<br><strong>2&gt;前期处理</strong><br>    对收集到信息进行筛选以及格式转化<br><strong>3&gt;WMS分配</strong><br>    WMS是窗口的Manager，同时也是InputEvent的派发者。<br><strong>4&gt;应用程序处理</strong><br>    WMS会先把事件传递到对应ViewRootImpl，ViewRootImpl分发事件，传递给相应的DecorView,DecorView在调用Activity中的Window.Callback将事件传递给Activity；然后Activity在通过dispatchTouchEvent分发事件，下面就来到熟悉的View事件分发机制；具体见<a href="http://blog.csdn.net/woliuyunyicai/article/details/49866177" target="_blank" rel="external">《View机制深入学习（四）View的事件分发机制》</a></p>
