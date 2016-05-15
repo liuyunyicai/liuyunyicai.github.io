@@ -3,36 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Liuyunyicai</title>
+  <title>Picasso源码解析 | Liuyunyicai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title= Picasso源码解析一、Picasso使用：gradle:
+  <meta name="description" content="一、Picasso使用：gradle:
 1compile &amp;apos;com.squareup.picasso:picasso:2.5.2&amp;apos;
 使用：
 1Picasso.with(this).load(&amp;quot;http://...../photo3.jpg&amp;quot;).into(myImg);
 自定义的使用方法：
-1234567891011121">
+12345678910111213Picasso picasso =">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Liuyunyicai">
+<meta property="og:title" content="Picasso源码解析">
 <meta property="og:url" content="http://liuyunyicai.github.io/2016/05/15/Picasso源码解析/index.html">
 <meta property="og:site_name" content="Liuyunyicai">
-<meta property="og:description" content="title= Picasso源码解析一、Picasso使用：gradle:
+<meta property="og:description" content="一、Picasso使用：gradle:
 1compile &amp;apos;com.squareup.picasso:picasso:2.5.2&amp;apos;
 使用：
 1Picasso.with(this).load(&amp;quot;http://...../photo3.jpg&amp;quot;).into(myImg);
 自定义的使用方法：
-1234567891011121">
+12345678910111213Picasso picasso =">
 <meta property="og:image" content="http://chuantu.biz/t4/15/1463301611x3738746547.png">
 <meta property="og:image" content="http://chuantu.biz/t4/15/1463301826x3738746571.png">
 <meta property="og:image" content="http://chuantu.biz/t4/15/1463302281x3738746571.png">
-<meta property="og:updated_time" content="2016-05-15T09:06:30.709Z">
+<meta property="og:updated_time" content="2016-05-15T09:10:03.213Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Liuyunyicai">
-<meta name="twitter:description" content="title= Picasso源码解析一、Picasso使用：gradle:
+<meta name="twitter:title" content="Picasso源码解析">
+<meta name="twitter:description" content="一、Picasso使用：gradle:
 1compile &amp;apos;com.squareup.picasso:picasso:2.5.2&amp;apos;
 使用：
 1Picasso.with(this).load(&amp;quot;http://...../photo3.jpg&amp;quot;).into(myImg);
 自定义的使用方法：
-1234567891011121">
+12345678910111213Picasso picasso =">
 <meta name="twitter:image" content="http://chuantu.biz/t4/15/1463301611x3738746547.png">
   
     <link rel="alternative" href="/atom.xml" title="Liuyunyicai" type="application/atom+xml">
@@ -263,11 +263,28 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Picasso源码解析
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
           
-        <hr>
-<h2 id="title-Picasso源码解析"><a href="#title-Picasso源码解析" class="headerlink" title="title= Picasso源码解析"></a>title= Picasso源码解析</h2><h2 id="一、Picasso使用："><a href="#一、Picasso使用：" class="headerlink" title="一、Picasso使用："></a>一、Picasso使用：</h2><p><strong>gradle:</strong></p>
+        <h2 id="一、Picasso使用："><a href="#一、Picasso使用：" class="headerlink" title="一、Picasso使用："></a>一、Picasso使用：</h2><p><strong>gradle:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile &apos;com.squareup.picasso:picasso:2.5.2&apos;</span><br></pre></td></tr></table></figure>
 <p><strong>使用：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Picasso.with(this).load(&quot;http://...../photo3.jpg&quot;).into(myImg);</span><br></pre></td></tr></table></figure>
@@ -384,7 +401,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#title-Picasso源码解析"><span class="toc-number">1.</span> <span class="toc-text">title= Picasso源码解析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Picasso使用："><span class="toc-number">2.</span> <span class="toc-text">一、Picasso使用：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、源码分析"><span class="toc-number"></span> <span class="toc-text">二、源码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#（一）Picasso-with进行一系列初始化"><span class="toc-number">1.</span> <span class="toc-text">（一）Picasso.with进行一系列初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Picasso-Builder-build"><span class="toc-number">1.1.</span> <span class="toc-text">1、Picasso.Builder#build:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Picasso-load"><span class="toc-number">1.2.</span> <span class="toc-text">2、Picasso#load:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、RequestCreator-into："><span class="toc-number">1.3.</span> <span class="toc-text">3、RequestCreator#into：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Picasso-enqueueAndSubmit："><span class="toc-number">1.4.</span> <span class="toc-text">4、Picasso#enqueueAndSubmit：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Action-cancel"><span class="toc-number">1.4.1.</span> <span class="toc-text">1）Action#cancel:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）-Dispatcher-dispatchCacnel"><span class="toc-number">1.4.2.</span> <span class="toc-text">2） Dispatcher#dispatchCacnel</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Picasso-submit"><span class="toc-number">1.5.</span> <span class="toc-text">5、Picasso#submit:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Dispatcher-performSubmit"><span class="toc-number">1.6.</span> <span class="toc-text">6、Dispatcher#performSubmit:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Bitmap-attach："><span class="toc-number">1.6.1.</span> <span class="toc-text">1）Bitmap#attach：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）ExecutorService："><span class="toc-number">1.6.2.</span> <span class="toc-text">2）ExecutorService：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1）来看PicassoExecutorService："><span class="toc-number">1.6.2.1.</span> <span class="toc-text">2.1）来看PicassoExecutorService：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2）PicassoExecutorService-adjustThreadCount："><span class="toc-number">1.6.2.2.</span> <span class="toc-text">2.2）PicassoExecutorService#adjustThreadCount：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3）PicassoThreadFactory："><span class="toc-number">1.6.2.3.</span> <span class="toc-text">2.3）PicassoThreadFactory：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4）PicassoExecutorService-submit"><span class="toc-number">1.6.2.4.</span> <span class="toc-text">2.4）PicassoExecutorService#submit:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、BitmapHunter"><span class="toc-number">1.7.</span> <span class="toc-text">7、BitmapHunter:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Dispatcher-forReqeust："><span class="toc-number">1.7.1.</span> <span class="toc-text">1）Dispatcher#forReqeust：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）BitmapHunter"><span class="toc-number">1.7.2.</span> <span class="toc-text">2）BitmapHunter:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1）Bitmap-hunt"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">2.1）Bitmap#hunt:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2）NetworkRequestHandler-load"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">2.2）NetworkRequestHandler#load:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3）Downloader"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">2.3）Downloader:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4）Dispatcher："><span class="toc-number">1.7.2.4.</span> <span class="toc-text">2.4）Dispatcher：</span></a></li></ol></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、Picasso使用："><span class="toc-number">1.</span> <span class="toc-text">一、Picasso使用：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#二、源码分析"><span class="toc-number"></span> <span class="toc-text">二、源码分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#（一）Picasso-with进行一系列初始化"><span class="toc-number">1.</span> <span class="toc-text">（一）Picasso.with进行一系列初始化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、Picasso-Builder-build"><span class="toc-number">1.1.</span> <span class="toc-text">1、Picasso.Builder#build:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Picasso-load"><span class="toc-number">1.2.</span> <span class="toc-text">2、Picasso#load:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、RequestCreator-into："><span class="toc-number">1.3.</span> <span class="toc-text">3、RequestCreator#into：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、Picasso-enqueueAndSubmit："><span class="toc-number">1.4.</span> <span class="toc-text">4、Picasso#enqueueAndSubmit：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Action-cancel"><span class="toc-number">1.4.1.</span> <span class="toc-text">1）Action#cancel:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）-Dispatcher-dispatchCacnel"><span class="toc-number">1.4.2.</span> <span class="toc-text">2） Dispatcher#dispatchCacnel</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Picasso-submit"><span class="toc-number">1.5.</span> <span class="toc-text">5、Picasso#submit:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Dispatcher-performSubmit"><span class="toc-number">1.6.</span> <span class="toc-text">6、Dispatcher#performSubmit:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Bitmap-attach："><span class="toc-number">1.6.1.</span> <span class="toc-text">1）Bitmap#attach：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）ExecutorService："><span class="toc-number">1.6.2.</span> <span class="toc-text">2）ExecutorService：</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1）来看PicassoExecutorService："><span class="toc-number">1.6.2.1.</span> <span class="toc-text">2.1）来看PicassoExecutorService：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2）PicassoExecutorService-adjustThreadCount："><span class="toc-number">1.6.2.2.</span> <span class="toc-text">2.2）PicassoExecutorService#adjustThreadCount：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3）PicassoThreadFactory："><span class="toc-number">1.6.2.3.</span> <span class="toc-text">2.3）PicassoThreadFactory：</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4）PicassoExecutorService-submit"><span class="toc-number">1.6.2.4.</span> <span class="toc-text">2.4）PicassoExecutorService#submit:</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、BitmapHunter"><span class="toc-number">1.7.</span> <span class="toc-text">7、BitmapHunter:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1）Dispatcher-forReqeust："><span class="toc-number">1.7.1.</span> <span class="toc-text">1）Dispatcher#forReqeust：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2）BitmapHunter"><span class="toc-number">1.7.2.</span> <span class="toc-text">2）BitmapHunter:</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-1）Bitmap-hunt"><span class="toc-number">1.7.2.1.</span> <span class="toc-text">2.1）Bitmap#hunt:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2）NetworkRequestHandler-load"><span class="toc-number">1.7.2.2.</span> <span class="toc-text">2.2）NetworkRequestHandler#load:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-3）Downloader"><span class="toc-number">1.7.2.3.</span> <span class="toc-text">2.3）Downloader:</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-4）Dispatcher："><span class="toc-number">1.7.2.4.</span> <span class="toc-text">2.4）Dispatcher：</span></a></li></ol></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -441,7 +458,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"　| Liuyunyicai　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Picasso源码解析　| Liuyunyicai　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
